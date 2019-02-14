@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  ComponentTitle = 'This is my Binding Take Care Of It'
+  clickHandler(){
+    alert('This is the Event Binding Click')
+  }
 }
