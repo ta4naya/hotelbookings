@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RentalComponent implements OnInit {
 
   constructor() { }
-
+  rentals: any[] =[1,2,3,4]
   ngOnInit() {
   }
 
