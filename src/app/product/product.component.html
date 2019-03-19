@@ -1,0 +1,41 @@
+<div class='table-responsive'>
+   
+  <table class='table'*ngIf = 'products && products.length'>
+    
+       <thead>
+          <tr>
+           <th>
+              <button (click)='toggleImage()'>
+                {{showImage ? 'Hide' : 'Show'}} Image
+              </button>
+           </th>
+           <th>Audio Name</th>
+           <th>Artist</th>
+           <th>Song</th>
+           <th>Url</th>
+          </tr>
+       </thead>
+
+      
+      <tbody>
+          <tr *ngFor ='let product of products'>
+             <td><img *ngIf='showImage'
+                      [src] =product.imageUrl
+                      [style.width.px] = 'widthLength'
+                      [style.length.px]= 'widthLength' />
+             </td>
+            <td>{{product.productName}}</td>
+            <td>{{product.productAuthor | lowercase}}</td>
+            <td><audio  controls> 
+               <source src={{product.producturl}} type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio></td>
+
+            <td>{{product.producturl}}</td>
+
+          </tr>
+                                
+      </tbody>
+    </table>
+
+  </div>
